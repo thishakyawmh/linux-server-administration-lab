@@ -38,7 +38,7 @@ A hands-on learning project focused on Linux system administration and DevOps fu
 
 ## Project Status
 
-**In Progress**
+**In Progress** — the Nginx deployment and backup workflow are runnable; the remaining administration topics are documented and are being expanded into repeatable labs.
 
 ## Working demonstration: Ubuntu web server and backup
 
@@ -58,3 +58,14 @@ administration notes:
 Verified on Ubuntu 26.04.1: the backup archive contained the sample file, the
 health check reported Nginx active with HTTP status 200, and the recovery
 script confirmed Nginx was active. These checks were run on the local machine.
+
+
+## Automated checks
+
+Run the backup script test:
+
+```bash
+bash tests/backup-lab-test.sh
+```
+
+GitHub Actions checks Bash syntax, runs ShellCheck, and verifies that the backup script creates a readable archive.
